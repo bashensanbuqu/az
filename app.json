@@ -6,7 +6,7 @@
     "python",
     "Heroku"
   ],  
-  "repository": "https://github.com/testnobody/azure-manager",
+  "repository": "https://github.com/bashensanbuqu/azure-manager",
   "env":{"adminname": {
             "description": "面板账户",
             "value": "admin"
