@@ -186,8 +186,8 @@ def create_vm():
             storgesize=request.form.get('storgesize')
             ## 此处为VM默认登陆密码
 
-            username = request.form.get('vmusername')#"defaultuser"
-            password = request.form.get('vmpasswd')#"Thisisyour.password1"
+            username = request.form.get('vmusername')#"azureuser"
+            password = request.form.get('vmpasswd')#"Taohaiying520."
 
             char = re.findall(r'[a-z]', password)
             bigchar = re.findall(r'[A-Z]', password)
