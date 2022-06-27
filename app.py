@@ -296,8 +296,8 @@ def changeip_vm(tag):
             threading.Thread(target=function.change_ip, args=(subscription_id, credential, tag)).start()
             flash("更换IP进行中，请耐心等待1-3分钟")
             return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
-        except:
-            flash("出现未知错误，请重试")
+#        except:
+#            flash("出现未知错误，请重试")
     else:
         #logger.debug("you are not logged in")
         return redirect(url_for('login'))
