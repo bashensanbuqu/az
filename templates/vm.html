@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>账户 {{ account }} 管理中 <a class="go" href="/account/list?account={{ account }}"  title="GO!">返回</a></p>
+    <p>账户 {{ account }} 管理中 <a class="go" href="/account/list?account={{ account }}"  title="返回">返回</a></p>
     <form method="post">
       <div>
-          <p><label>创建资源组名字 <input type="text" name="tag" autocomplete="off" required></label></p>
+          <p><label>创建资源组名字 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
           <p><label>VM登陆用户名 <input type="text" name="vmusername" value="azureuser" autocomplete="off" required></label></p>
           <p><label>VM登陆密码【12位/大小写+数字】 <input type="text" name="vmpasswd" value="Taohaiying520." autocomplete="off" required></label></p>
           <p><label>root密码 <input type="text" name="rootpwd" value="Taohaiying520." autocomplete="off" required></label></p>
