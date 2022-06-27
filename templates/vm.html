@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+<title>创建</title>
 {% block content %}
-    <p>账户 {{ account }} 管理中 <a class="go" href="/account/list?account={{ account }}"  title="返回">返回</a></p>
+    <p>{{ account }} 创建虚拟机 <a class="go" href="/account/list?account={{ account }}"  title="返回">返回虚拟机列表</a></p>
     <form method="post">
       <div>
-          <p><label>创建资源组名字 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
+          <p><label>创建资源组名称 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="vmusername" value="azureuser" autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="vmpasswd" value="Taohaiying520." autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="rootpwd" value="Taohaiying520." autocomplete="off" required></label></p>
