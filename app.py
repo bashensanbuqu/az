@@ -110,7 +110,7 @@ def accountadd():
 
             resp = make_response(redirect(url_for('index')))
 
-            flash('添加管理账户成功')
+            flash('添加订阅成功')
             return resp
 
         return render_template('account.html')
@@ -132,7 +132,7 @@ def accountdel():
 
 
 
-        flash('删除账户成功')
+        flash('删除订阅成功')
         resp = make_response(redirect(url_for('index')))
         return resp
     else:
