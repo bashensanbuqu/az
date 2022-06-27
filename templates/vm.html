@@ -9,20 +9,20 @@
           <p><label>VM登陆密码【12位/大小写+数字】 <input type="text" name="vmpasswd" value="Taohaiying520." autocomplete="off" required></label></p>
           <p><label>root密码 <input type="text" name="rootpwd" value="Taohaiying520." autocomplete="off" required></label></p>
         <p><label>区域 <select name="location" required>
+            <option value="koreacentral">韩国中</option>
             <option value="eastasia">香港</option>
+            <option value="japaneast">日本东</option>
+            <option value="centralus">美国中</option>
+            <option value="southeastasia">新加坡</option>
             <option value="westus2">美国西2</option>
             <option value="westus3">美国西3</option>
-            <option value="centralus">美国中</option>
             <option value="eastus">美西东</option>
-            <option value="southeastasia">新加坡</option>
             <option value="japanwest">日本西</option>
-            <option value="japaneast">日本东</option>
-            <option value="koreacentral">韩国中</option>
             <option value="koreasouth">韩国南</option>
         </select></label></p>
         <p><label>型号 <select name="size" required>
-            <option value="Standard_B1ms">B1ms</option>
             <option value="Standard_B1s">B1s</option>
+            <option value="Standard_B1ms">B1ms</option>
             <option value="Standard_B1ls">B1ls</option>
             <option value="Standard_B2s">B2s</option>
             <option value="Standard_D2s_v3">D2s</option>
@@ -50,12 +50,13 @@
             <option value="5">创建5台</option>
         </select></label></p>
         <p><label>系统 <select name="os" required>
+            <option value="centos">CentOS 7.5</option>
+            <option value="centos">CentOS 7.9</option>
             <option value="debian11">debian 11</option>
+            <option value="debian10">Debian 10</option>
             <option value="ubuntu20">Ubuntu 20.04 LTS</option>
             <option value="ubuntu18">Ubuntu 18.04 LTS</option>
             <option value="ubuntu16">Ubuntu 16.04 LTS</option>
-            <option value="centos">CentOS 7.5</option>
-            <option value="debian10">Debian 10</option>
             <option value="windows2019">[smalldisk] Windows Server 2019 Datacenter</option>
             <option value="windows2016">[smalldisk] Windows Server 2016 Datacenter</option>
             <option value="windows2012">[smalldisk] Windows Server 2012 Datacenter</option>
