@@ -3,9 +3,9 @@
 {% block content %}
 <script>
     window.onload = function() {
-        let clientId = document.getElementById("client_id")
-        document.getElementById("account_name").addEventListener("input",function(e){
-            clientId.value = document.getElementById("account_name").value
+        let account = document.getElementById("account")
+        document.getElementById("subscription_id").addEventListener("input",function(e){
+            account.value = document.getElementById("subscription_id").value
             
         })
     }
@@ -14,11 +14,11 @@
 </script>
 <p>添加待管理Azure账户</p>
     <form method="post">
-         <p>账户名称(任意) <input type="text" id="account_name" name="account" autocomplete="off" required></p>
-         <p>Client_id <input type="text" id="client_id" name="client_id" autocomplete="on" required></p>
+		 <p>邮箱(不用填) <input type="text" id="account" name="account" autocomplete="on" required></p>
+         <p>Client_id <input type="text" name="client_id" autocomplete="off" required></p>
          <p>Client_secret <input type="text" name="client_secret" autocomplete="off" required></p>
          <p>Tenant_id <input type="text" name="tenant_id" autocomplete="off" required></p>
-         <p>Subscription_id <input type="text" name="subscription_id" autocomplete="off" required></p>
+		 <p>Subscription_id <input type="text" id="subscription_id" name="subscription_id" autocomplete="off" required></p>
     <input class="btn" type="submit" name="submit" value="Add" >
     </form>
 {% endblock %}
