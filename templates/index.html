@@ -4,7 +4,7 @@
 <p>订阅列表</p>
     {% for u in users %}
         <ul class="list">
-            <li>{{ u.account }}  {{ u.eml }}
+            <li>{{ u.account }}  
                 <span class="float-right">
                 <a class="go" href="/account/list?account={{ u.account }}" title="虚拟机列表">虚拟机列表</a>
                 <a class="go" href="/account/delete?account={{ u.account }}" target="" title="删除{{ u.account }}" onclick="return confirm('删除订阅{{ u.account }}?')">删除订阅</a>
