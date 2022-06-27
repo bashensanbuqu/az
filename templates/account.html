@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<p>添加订阅</p>
 <script>
     window.onload = function() {
         let account = document.getElementById("account")
@@ -12,7 +13,7 @@
     
     
 </script>
-<p>添加订阅信息</p>
+
     <form method="post">
          <p> <input type="hidden" id="account" name="account" autocomplete="on" required></p>
          <p>appId <input type="text" name="client_id" autocomplete="off" required></p>
