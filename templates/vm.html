@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 <title>创建</title>
 {% block content %}
-    <p>{{ account }} 创建虚拟机 <a class="go" href="/account/list?account={{ account }}"  title="返回">返回虚拟机列表</a></p>
+    <p>{{ account }} 新建虚拟机 <a class="go" href="/account/list?account={{ account }}"  title="返回">返回虚拟机列表</a></p>
     <form method="post">
       <div>
           <p><label>创建资源组名称 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
