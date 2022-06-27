@@ -295,7 +295,6 @@ def changeip_vm(tag):
         try:
             threading.Thread(target=function.change_ip, args=(subscription_id, credential, tag)).start()
             flash("更换IP进行中，请耐心等待1-3分钟")
-            time.sleep(10)
             return redirect(url_for('index'))
         except:
             flash("出现未知错误，请重试")
