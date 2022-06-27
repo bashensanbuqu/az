@@ -9,7 +9,7 @@
             </li>
         {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
     </ul>
-    <p> <a class="go" href="/account/vm/create?account={{ account }}" title="GO!">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="GO!">刷新账户状态</a></p>
+    <p> <a class="go" href="/account/vm/create?account={{ account }}" title="新建">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="刷新">刷新订阅状态</a></p>
     <ul  class="list">
         {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
         <li>{{ tag }} - {{ ip }}
