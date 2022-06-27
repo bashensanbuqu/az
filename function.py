@@ -74,7 +74,7 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
         sku = "7.5"
         version = "latest"
         
-    elif os == "centos7.9":
+    elif os == "centos79":
         publisher = "OpenLogic"
         offer = "CentOS"
         sku = "7.9"
