@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <p>虚拟机列表</p>
     <p>{{ account }}</p>
     <ul  class="list">
         {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
@@ -16,8 +17,8 @@
         <span class="float-right">
             <a class="go" href="/account/vm/delete/{{ tag }}?account={{ account }}" title="删除" >删除虚拟机</a>
             <a class="go" href="/account/vm/changeip/{{ tag }}?account={{ account }}" title="更换" onclick="return confirm('更换IP?')">更换IP</a>
-            <a class="go" href="/account/vm/start/{{ tag }}?account={{ account }}" title="启动" onclick="return confirm('启动虚拟机?')">启动虚拟机</a>
-            <a class="go" href="/account/vm/stop/{{ tag }}?account={{ account }}" title="停止" onclick="return confirm('停止虚拟机?')">停止虚拟机</a>
+            <a class="go" href="/account/vm/start/{{ tag }}?account={{ account }}" title="启动" onclick="return confirm('启动?')">启动</a>
+            <a class="go" href="/account/vm/stop/{{ tag }}?account={{ account }}" title="停止" onclick="return confirm('停止?')">停止</a>
         </span>
         </li>
         {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
