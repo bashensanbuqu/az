@@ -5,22 +5,9 @@
     <p>{{ account }} <a class="go" href="/account/list?account={{ account }}"  title="返回">返回虚拟机列表</a></p>
     <form method="post">
       <div>
-          <p><label>创建资源组名称 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="vmusername" value="azureuser" autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="vmpasswd" value="Taohaiying520." autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="rootpwd" value="Taohaiying520." autocomplete="off" required></label></p>
-        <p><label>区域 <select name="location" required>
-            <option value="koreacentral">韩国中</option>
-            <option value="eastasia">香港</option>
-            <option value="japaneast">日本东</option>
-            <option value="centralus">美国中</option>
-            <option value="southeastasia">新加坡</option>
-            <option value="westus2">美国西2</option>
-            <option value="westus3">美国西3</option>
-            <option value="eastus">美西东</option>
-            <option value="japanwest">日本西</option>
-            <option value="koreasouth">韩国南</option>
-        </select></label></p>
         <p><label>型号 <select name="size" required>
             <option value="Standard_B1s">B1s</option>
             <option value="Standard_B1ls">B1ls</option>
@@ -63,6 +50,19 @@
             <option value="windows2012">[smalldisk] Windows Server 2012 Datacenter</option>
             <option value="windows-server-2012-r2-datacenter-smalldisk-g2">[smalldisk] Windows Server 2012 R2 Datacenter - Gen2</option>
         </select></label></p>
+        <p><label>区域 <select name="location" required>
+            <option value="koreacentral">韩国中</option>
+            <option value="eastasia">香港</option>
+            <option value="japaneast">日本东</option>
+            <option value="centralus">美国中</option>
+            <option value="southeastasia">新加坡</option>
+            <option value="westus2">美国西2</option>
+            <option value="westus3">美国西3</option>
+            <option value="eastus">美西东</option>
+            <option value="japanwest">日本西</option>
+            <option value="koreasouth">韩国南</option>
+        </select></label></p>
+        <p><label>创建资源组名称 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
     <input class="btn" type="submit" name="submit" value="新建" >
       </div>
     </form>
