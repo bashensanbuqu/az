@@ -3,9 +3,6 @@
 {% block content %}
     <p>虚拟机列表</p>
     <p>备注邮箱  {{ account }}</p>
-    <p>appid  {{ client_id }}</p>
-    <p>passwd  {{ client_secret }}</p>
-    <p>tenant  {{ tenant_id }}</p>
     <p>sub订阅ID  {{ subscription_id }}</p>
     <ul  class="list">
         {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
