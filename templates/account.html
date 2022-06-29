@@ -2,24 +2,14 @@
 
 {% block content %}
 <p>添加订阅</p>
-#<script>
- #   window.onload = function() {
-  #      let account = document.getElementById("account")
-   #     document.getElementById("subscription_id").addEventListener("input",function(e){
-    #        account.value = document.getElementById("subscription_id").value
-            
-     #   })
-    #}
-    
-    
-#</script>
+
 
     <form method="post">
-         <p>备注邮箱(不用填) <input type="text" id="account" name="account" autocomplete="on" required></p>
+         <p>备注邮箱 <input type="text"  name="account" autocomplete="off" required></p>
          <p>appId <input type="text" name="client_id" autocomplete="off" required></p>
          <p>password <input type="text" name="client_secret" autocomplete="off" required></p>
          <p>tenant <input type="text" name="tenant_id" autocomplete="off" required></p>
-         <p>sub订阅ID <input type="text" id="subscription_id" name="subscription_id" autocomplete="off" required></p>
+         <p>sub订阅ID <input type="text"  name="subscription_id" autocomplete="off" required></p>
     <input class="btn" type="submit" name="submit" value="添加" >
     </form>
 {% endblock %}
