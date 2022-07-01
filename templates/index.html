@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>订阅列表</p>
+    {% for u in users %}
+        <ul class="list">
+            <li>
+                {{ u.account }} <br>
+                {{ u.client_id }} <br>    
+                {{ u.client_secret }} <br>      
+                {{ u.tenant_id }} <br>   
+                {{ u.subscription_id }} <br> 
+                备注邮箱 / appId / password / tenant / sub订阅ID 
+                <span class="float-right">
+                <a class="go" href="/account/list?account={{ u.account }}" title="虚拟机列表">虚拟机列表</a>
+                <a class="go" href="/account/delete?account={{ u.account }}" target="" title="删除{{ u.account }}" onclick="return confirm('删除订阅{{ u.account }}?')">删除订阅</a>
+                </span>
+            </li>
+        </ul>
+    {% else %}
+        <p>请先添加订阅</p>
+    {% endfor %}
+{% endblock %}

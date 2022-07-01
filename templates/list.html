@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>虚拟机列表</p>
+
+    <p>备注邮箱  {{ account }}</p>
+    <p>appId  {{ client_id }}</p>
+    <p>password  {{ client_secret }}</p>
+    <p>tenant  {{ tenant_id }}</p>
+    <p>sub订阅ID  {{ subscription_id }}</p>
+
+
+    <ul  class="list">
+        {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
+            <li>{{ name }}
+                {{ id_status }}
+            </li>
+        {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+    </ul>
+    <p> <a class="go" href="/account/vm/create?account={{ account }}" title="新建">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="刷新">刷新订阅状态</a></p>
+    <ul  class="list">
+        {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
+        <li>{{ tag }} - {{ ip }}
+        <span class="float-right">
+            <a class="go" href="/account/vm/delete/{{ tag }}?account={{ account }}" title="删除{{ tag }}" >删除虚拟机</a>
+            <a class="go" href="/account/vm/changeip/{{ tag }}?account={{ account }}" title="更换{{ ip }}" onclick="return confirm('{{ ip }}更换IP?')">更换IP</a>
+            <a class="go" href="/account/vm/start/{{ tag }}?account={{ account }}" title="启动" >启动</a>
+            <a class="go" href="/account/vm/stop/{{ tag }}?account={{ account }}" title="停止" >停止</a>
+        </span>
+        </li>
+        {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+    </ul>
+{% endblock %}
