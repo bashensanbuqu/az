@@ -9,18 +9,18 @@
           <p><label> <input type="hidden" name="vmpasswd" value="Taohaiying520." autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="rootpwd" value="Taohaiying520." autocomplete="off" required></label></p>
         <p><label>型号 <select name="size" required>
-            <option value="Standard_B1s">B1s</option>
-            <option value="Standard_B1ls">B1ls</option>
-            <option value="Standard_B1ms">B1ms</option>
-            <option value="Standard_B2s">B2s</option>
-            <option value="Standard_D2s_v3">D2s</option>
-            <option value="Standard_D4s_v3">D4s</option>
-            <option value="Standard_F2s">F2s</option>
-            <option value="Standard_F4s">F4s</option>
-            <option value="Standard_F8s">F8s</option>
-            <option value="Standard_F2s_v2">F2s_v2</option>
-            <option value="Standard_F4s_v2">F4s_v2</option>
-            <option value="Standard_F8s_v2">F8s_v2</option>
+            <option value="Standard_B1s"   >B1s----1c1g-----7.5U优惠</option>
+            <option value="Standard_B1ls"  >B1ls---1c0.5g---3.7U</option>
+            <option value="Standard_B1ms"  >B1ms---1c2g-----14.9U</option>
+            <option value="Standard_B2s"   >B2s----2c2g-----30U</option>
+            <option value="Standard_D2s_v3">D2s---2c8g----69.1U</option>
+            <option value="Standard_D4s_v3">D4s---4c16g---138.2U</option>
+            <option value="Standard_F2s"   >F2s---2c4g----71.2U</option>
+            <option value="Standard_F4s"   >F4s---4c8g----143.3U</option>
+            <option value="Standard_F8s"   >F8s---8c16g---286.6U</option>
+            <option value="Standard_F2s_v2">F2s_v2---2c4g----60.9U</option>
+            <option value="Standard_F4s_v2">F4s_v2---4c8g----121.7U</option>
+            <option value="Standard_F8s_v2">F8s_v2---8c16g---243.4U</option>
         </select></label></p>
         <p><label>硬盘大小 <select name="storgesize" required>
             <option value=64>64</option>
@@ -49,18 +49,52 @@
             <option value="windows2016">[smalldisk] Windows Server 2016 Datacenter</option>
             <option value="windows2012">[smalldisk] Windows Server 2012 Datacenter</option>
             <option value="windows-server-2012-r2-datacenter-smalldisk-g2">[smalldisk] Windows Server 2012 R2 Datacenter - Gen2</option>
+            <option value="win10">win10</option>
         </select></label></p>
         <p><label>区域 <select name="location" required>
-            <option value="koreacentral">韩国中</option>
-            <option value="eastasia">香港</option>
-            <option value="japaneast">日本东</option>
-            <option value="centralus">美国中</option>
-            <option value="southeastasia">新加坡</option>
-            <option value="westus2">美国西2</option>
-            <option value="westus3">美国西3</option>
-            <option value="eastus">美西东</option>
-            <option value="japanwest">日本西</option>
-            <option value="koreasouth">韩国南</option>
+	     //常用
+            <option       value="koreacentral">01.韩国中---首尔---亚洲</option>
+            <option           value="eastasia">02.香港------------亚洲</option>
+            <option          value="japaneast">03.日本东---东京----亚洲</option>
+            <option      value="southeastasia">04.新加坡x----------亚洲</option>
+            <option         value="koreasouth">05.韩国南---釜山x---亚洲</option>
+            <option          value="japanwest">06.日本西---大阪x---亚洲</option>
+            // 美国
+            <option          value="centralus">07.美国中-----爱荷华州-----北美洲</option>
+            <option      value="westcentralus">08.美国中西---怀俄明州-----北美洲</option>
+            <option     value="southcentralus">09.美国中南---德克萨斯州---北美洲</option>
+            <option     value="northcentralus">10.美国中北---伊利诺伊州---北美洲</option>
+            <option             value="eastus">11.美国东-----弗吉尼亚-----北美洲</option>
+            <option            value="eastus2">12.美国东2----弗吉尼亚-----北美洲</option>
+            <option             value="westus">13.美国西-----加利福尼亚---北美洲</option>
+            <option            value="westus2">14.美国西2----华盛顿x------北美洲</option>
+            <option            value="westus3">15.美国西3----凤凰城-------北美洲</option>
+            // 加拿大
+            <option      value="canadacentral">16.加拿大中---多伦多x------北美洲</option>
+            <option         value="canadaeast">17.加拿大东---魁北克-------北美洲</option>
+            // 澳大利亚
+            <option   value="australiacentral">18.澳大利亚中-----堪培拉--------大洋洲</option>
+            <option      value="australiaeast">19.澳大利亚东-----新南威尔士州---大洋洲</option>
+            <option value="australiasoutheast">20.澳大利亚东南---维多利亚-------大洋洲</option>
+            // 英国
+            <option             value="ukwest">21.英国西-----加的夫-----欧洲</option>
+            <option            value="uksouth">22.英国南-----伦敦-------欧洲</option>
+            // 欧洲
+            <option      value="francecentral">23.法国中-----巴黎-------欧洲</option>
+            <option      value="swedencentral">24.瑞典中-----耶夫勒-----欧洲</option>
+            <option value="germanywestcentral">25.德国中西---法兰克福---欧洲</option>
+            <option         value="norwayeast">26.挪威东-----挪威-------欧洲</option>
+            <option         value="westeurope">27.西欧-------荷兰-------欧洲</option>
+            <option        value="northeurope">28.北欧-------爱尔兰-----欧洲</option>
+            <option   value="switzerlandnorth">29.瑞士北-----苏黎世-----欧洲</option>
+            // 印度
+            <option       value="centralindia">30.印度中-----浦那---亚洲</option>
+            <option         value="southindia">31.印度南-----钦奈---亚洲</option>
+            // 其他
+            <option           value="uaenorth">32.阿联酋北---迪拜---亚洲</option>
+            <option       value="qatarcentral">33.卡塔尔中---多哈---亚洲</option>
+            <option        value="brazilsouth">34.巴西南---圣保罗州-----南美洲</option>
+            <option   value="southafricanorth">35.南非北---约翰内斯堡---非洲</option>
         </select></label></p>
         <p><label>创建资源组名称 <input type="text" name="tag" value="az" autocomplete="off" required></label></p>
     <input class="btn" type="submit" name="submit" value="新建" >
