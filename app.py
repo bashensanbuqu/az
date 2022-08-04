@@ -142,7 +142,7 @@ def accountdel():
 
 @app.route('/account/list')
 def list():
-    if 'username' in session:
+  #  if 'username' in session:
         account = request.args.get('account')
         result = User.query.filter(User.account == account).all()
 
@@ -155,14 +155,14 @@ def list():
 
         dict, subscription_list = function.list(subscription_id, credential)
         return render_template('list.html',dict=dict, subscription_list=subscription_list, account=account)
-    else:
+  #  else:
         #logger.debug("you are not logged in")
-        return redirect(url_for('login'))
+  #      return redirect(url_for('login'))
 
 
 @app.route('/account/vm/create', methods=['GET', 'POST'])
 def create_vm():
-    if 'username' in session:
+  #  if 'username' in session:
         account = request.args.get('account')
         print(account)
 
@@ -205,14 +205,14 @@ def create_vm():
 
 
         return render_template('vm.html', account=account)
-    else:
+  #  else:
         #logger.debug("you are not logged in")
-        return redirect(url_for('login'))
+  #      return redirect(url_for('login'))
 
 
 @app.route('/account/vm/delete/<string:tag>')
 def delete_vm(tag):
-    if 'username' in session:
+  #  if 'username' in session:
         account = request.args.get('account')
         result = User.query.filter(User.account == account).all()
 
@@ -231,13 +231,13 @@ def delete_vm(tag):
 
         dict, subscription_list = function.list(subscription_id, credential)
         return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
-    else:
+  #  else:
         #logger.debug("you are not logged in")
-        return redirect(url_for('login'))
+  #      return redirect(url_for('login'))
 
 @app.route('/account/vm/start/<string:tag>')
 def start_vm(tag):
-    if 'username' in session:
+   # if 'username' in session:
         account = request.args.get('account')
 
         result = User.query.filter(User.account == account).all()
@@ -252,13 +252,13 @@ def start_vm(tag):
         flash("开机中，请耐心等待1-3分钟")
         dict, subscription_list = function.list(subscription_id, credential)
         return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
-    else:
+   # else:
         #logger.debug("you are not logged in")
-        return redirect(url_for('login'))
+   #     return redirect(url_for('login'))
 
 @app.route('/account/vm/stop/<string:tag>')
 def stop_vm(tag):
-    if 'username' in session:
+  #  if 'username' in session:
         account = request.args.get('account')
 
         result = User.query.filter(User.account == account).all()
@@ -274,13 +274,13 @@ def stop_vm(tag):
         flash("关机中，请耐心等待1-3分钟")
         dict, subscription_list = function.list(subscription_id, credential)
         return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
-    else:
+   # else:
         #logger.debug("you are not logged in")
-        return redirect(url_for('login'))
+   #     return redirect(url_for('login'))
 
 @app.route('/account/vm/changeip/<string:tag>')
 def changeip_vm(tag):
-    if 'username' in session:
+ #   if 'username' in session:
         account = request.args.get('account')
 
         result = User.query.filter(User.account == account).all()
@@ -298,9 +298,9 @@ def changeip_vm(tag):
             return redirect(url_for('index'))
         except:
             flash("出现未知错误，请重试")
-    else:
-        #logger.debug("you are not logged in")
-        return redirect(url_for('login'))
+  #  else:
+  #      #logger.debug("you are not logged in")
+  #      return redirect(url_for('login'))
 
 if __name__ == '__main__':
     db.create_all()

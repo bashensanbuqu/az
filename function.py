@@ -105,6 +105,13 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
         offer = "WindowsServer"
         sku = "2012-r2-datacenter-smalldisk-g2"
         version = "latest"
+        
+    elif os == "win10":
+        publisher = "MicrosoftWindowsDesktop"
+        offer = "Windows-10"
+        sku = "win10-21h2-pro-zh-cn-g2"
+        version = "latest"
+        
     else:
         publisher = "Canonical"
         offer = "UbuntuServer"
