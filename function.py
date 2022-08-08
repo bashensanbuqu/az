@@ -80,11 +80,24 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
         sku = "7_9-gen2"
         version = "latest"
         
+    elif os == "centos85":
+        publisher = "OpenLogic"
+        offer = "CentOS"
+        sku = "8_5-gen2"
+        version = "latest"
+        
     elif os == "debian10":
         publisher = "Debian"
         offer = "debian-10"
         sku = "10"
         version = "latest"
+        
+     elif os == "debian9":
+        publisher = "credativ"
+        offer = "Debian"
+        sku = "9"
+        version = "latest"
+        
     elif os == "windows2019":
         publisher = "MicrosoftWindowsServer"
         offer = "WindowsServer"
