@@ -92,6 +92,11 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
         sku = "10"
         version = "latest"
 
+    elif os == "debian09":
+        publisher = "credativ"
+        offer = "Debian"
+        sku = "9"
+        version = "latest"
         
     elif os == "windows2019":
         publisher = "MicrosoftWindowsServer"
