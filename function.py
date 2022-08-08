@@ -93,8 +93,8 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
         version = "latest"
         
      elif os == "debian9":
-        publisher = "credativ"
-        offer = "Debian"
+        publisher = "Debian"
+        offer = "debian-9"
         sku = "9"
         version = "latest"
         
