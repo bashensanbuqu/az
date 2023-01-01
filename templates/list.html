@@ -17,8 +17,8 @@
             </li>
         {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
     </ul>
-    <p> <a class="go" href="/account/vm/create?account={{ account }}" title="新建">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="刷新">刷新订阅状态</a></p>
-    <ul  class="list">  <a class="go" href="http://az.91vps.tw:6001/{{ account }}" title="多ip设置" >多ip设置</a>
+    <p> <a class="go" href="/account/vm/create?account={{ account }}" title="新建">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="刷新">刷新订阅状态</a> <a class="go" href="http://az.91vps.tw:6001/{{ account }}" title="多ip设置" >多ip设置</a> </p>
+    <ul  class="list"> 
         {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
         <li>{{ tag }} - {{ ip }}
         <span class="float-right">
