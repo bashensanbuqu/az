@@ -9,7 +9,7 @@
 
 
 
-# Azure-manager
+# Az
 ### Manage your VM in Azure（multi users）.
 ### 管理你在AZURE的机器 多用户
 
