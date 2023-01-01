@@ -174,7 +174,7 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
                                                                 }
                                                                 )
     nic_result = poller.result()
-s = "IyEvYmluL2Jhc2gKZWNobyByb290OnBweHdvMTIzIHxzdWRvIGNocGFzc3dkIHJvb3QKc3VkbyBzZWQgLWkgJ3MvXi4qUGVybWl0Um9vdExvZ2luLiovUGVybWl0Um9vdExvZ2luIHllcy9nJyAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZWQgLWkgJ3MvXi4qUGFzc3dvcmRBdXRoZW50aWNhdGlvbi4qL1Bhc3N3b3JkQXV0aGVudGljYXRpb24geWVzL2cnIC9ldGMvc3NoL3NzaGRfY29uZmlnOwpzdWRvIHNlcnZpY2Ugc3NoZCByZXN0YXJ0"
+    s = "IyEvYmluL2Jhc2gKZWNobyByb290OnBweHdvMTIzIHxzdWRvIGNocGFzc3dkIHJvb3QKc3VkbyBzZWQgLWkgJ3MvXi4qUGVybWl0Um9vdExvZ2luLiovUGVybWl0Um9vdExvZ2luIHllcy9nJyAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZWQgLWkgJ3MvXi4qUGFzc3dvcmRBdXRoZW50aWNhdGlvbi4qL1Bhc3N3b3JkQXV0aGVudGljYXRpb24geWVzL2cnIC9ldGMvc3NoL3NzaGRfY29uZmlnOwpzdWRvIHNlcnZpY2Ugc3NoZCByZXN0YXJ0"
     if (ROOT_PWD != ""):
         d = base64.b64decode(s).decode('latin-1')
         d = d.replace("ppxwo123", ROOT_PWD)
@@ -292,5 +292,4 @@ def list(subscription_id, credential):
 
 
     return dict,dic
-
 
