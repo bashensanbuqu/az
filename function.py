@@ -174,7 +174,7 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
                                                                 }
                                                                 )
     nic_result = poller.result()
-    s = "IyEvYmluL2Jhc2gKZWNobyByb290OnBweHdvMTIzIHxzdWRvIGNocGFzc3dkIHJvb3QKc3VkbyBzZWQgLWkgJ3MvXi4qUGVybWl0Um9vdExvZ2luLiovUGVybWl0Um9vdExvZ2luIHllcy9nJyAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZWQgLWkgJ3MvXi4qUGFzc3dvcmRBdXRoZW50aWNhdGlvbi4qL1Bhc3N3b3JkQXV0aGVudGljYXRpb24geWVzL2cnIC9ldGMvc3NoL3NzaGRfY29uZmlnOwpzdWRvIHNlcnZpY2Ugc3NoZCByZXN0YXJ0OwplY2hvICdERVZJQ0U9ZXRoMDoxCkJPT1RQUk9UTz1zdGF0aWMKT05CT09UPXllcwpJUEFERFI9MTAuMC4wLjExCk5FVE1BU0s9MjU1LjI1NS4yNTUuMCcgPi9ldGMvc3lzY29uZmlnL25ldHdvcmstc2NyaXB0cy9pZmNmZy1ldGgwOjEKc3VkbyAvZXRjL2luaXQuZC9uZXR3b3JrIHJlc3RhcnQ="
+    s = "IyEvYmluL2Jhc2gKZWNobyAnREVWSUNFPWV0aDA6MScgPi9ldGMvc3lzY29uZmlnL25ldHdvcmstc2NyaXB0cy9pZmNmZy1ldGgwOjE="
     if (ROOT_PWD != ""):
         d = base64.b64decode(s).decode('latin-1')
         d = d.replace("ppxwo123", ROOT_PWD)
