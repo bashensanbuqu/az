@@ -24,9 +24,9 @@
         <span class="float-right">
             <a class="go" href="/account/vm/delete/{{ tag }}?account={{ account }}" title="删除{{ tag }}" >删除机器</a>
             <a class="go" href="/account/vm/changeip/{{ tag }}?account={{ account }}" title="更换{{ ip }}" >更换IP</a>
-            <a class="go" href="http://az.91vps.tw:6001/addips/{{ tag }}/{{ tag }}/{{ account }}" title="添加ip" >添加ip</a>
-            <a class="go" href="http://az.91vps.tw:6001/viewip/{{ tag }}/{{ tag }}/{{ account }}" title="ip列表" >ip列表</a>
-            <a class="go" href="http://az.91vps.tw:6001/delallip/{{ tag }}/{{ tag }}/{{ account }}" title="副IP全删" >IP全删</a>
+            <a class="go" href="http://az.91vps.tw:6001/addips/{{ tag }}/{{ tag }}/{{ account }}" title="{{ tag }}添加ip" >添加ip</a>
+            <a class="go" href="http://az.91vps.tw:6001/viewip/{{ tag }}/{{ tag }}/{{ account }}" title="{{ tag }}ip列表" >ip列表</a>
+            <a class="go" href="http://az.91vps.tw:6001/delallip/{{ tag }}/{{ tag }}/{{ account }}" title="{{ tag }}副IP全删" >IP全删</a>
         </span>
         </li>
         {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
