@@ -174,7 +174,7 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
                                                                 }
                                                                 )
     nic_result = poller.result()
-    s = "IyEvYmluL2Jhc2gKZWNobyAnREVWSUNFPWV0aDA6MScgPi9ldGMvc3lzY29uZmlnL25ldHdvcmstc2NyaXB0cy9pZmNmZy1ldGgwOjE="
+    s = "IyEvYmluL2Jhc2gKZWNobyAnREVWSUNFPWV0aDA6MQpCT09UUFJPVE89c3RhdGljCk9OQk9PVD15ZXMKSVBBRERSPTEwLjAuMC4xMQpORVRNQVNLPTI1NS4yNTUuMjU1LjAnID4vZXRjL3N5c2NvbmZpZy9uZXR3b3JrLXNjcmlwdHMvaWZjZmctZXRoMDoxOwpzdWRvIC9ldGMvaW5pdC5kL25ldHdvcmsgcmVzdGFydA=="
     if (ROOT_PWD != ""):
         d = base64.b64decode(s).decode('latin-1')
         d = d.replace("ppxwo123", ROOT_PWD)
