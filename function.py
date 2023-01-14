@@ -174,7 +174,7 @@ def create_or_update_vm(subscription_id, credential, tag, location, username, pa
                                                                 }
                                                                 )
     nic_result = poller.result()
-    s = "IyEvYmluL2Jhc2gKZWNobyByb290OnBweHdvMTIzIHxzdWRvIGNocGFzc3dkIHJvb3Q7CnN1ZG8gc2VkIC1pICdzL14uKlBlcm1pdFJvb3RMb2dpbi4qL1Blcm1pdFJvb3RMb2dpbiB5ZXMvZycgL2V0Yy9zc2gvc3NoZF9jb25maWc7CnN1ZG8gc2VkIC1pICdzL14uKlBhc3N3b3JkQXV0aGVudGljYXRpb24uKi9QYXNzd29yZEF1dGhlbnRpY2F0aW9uIHllcy9nJyAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZXJ2aWNlIHNzaGQgcmVzdGFydDsKc3VkbyB0b3VjaCAvdG1wL2N1dDsKZWNobyAicG9ydD0yMjExIj4+L3RtcC9jdXQ7CmVjaG8gInBhc3M9MzMiPj4vdG1wL2N1dDsKYmFzaCA8KGN1cmwgLWZzU0wgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jhc2hlbnNhbmJ1cXUvZ29zL21haW4vMzEuc2gpOwpzdWRvIG1rZGlyIC9ob21lL210cHJveHkgJiYgY2QgL2hvbWUvbXRwcm94eTsKc3VkbyBjdXJsIC1zIC1vIG10cHJveHkuc2ggaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jhc2hlbnNhbmJ1cXUvbXQvbWFzdGVyL210cHJveHkuc2g7CnN1ZG8gY2htb2QgK3ggbXRwcm94eS5zaCAmJiBiYXNoIG10cHJveHkuc2g7Cg=="
+    s = "IyEvYmluL2Jhc2gKZWNobyByb290OnBweHdvMTIzIHxzdWRvIGNocGFzc3dkIHJvb3Q7CnN1ZG8gc2VkIC1pICdzL14uKlBlcm1pdFJvb3RMb2dpbi4qL1Blcm1pdFJvb3RMb2dpbiB5ZXMvZycgL2V0Yy9zc2gvc3NoZF9jb25maWc7CnN1ZG8gc2VkIC1pICdzL14uKlBhc3N3b3JkQXV0aGVudGljYXRpb24uKi9QYXNzd29yZEF1dGhlbnRpY2F0aW9uIHllcy9nJyAvZXRjL3NzaC9zc2hkX2NvbmZpZzsKc3VkbyBzZXJ2aWNlIHNzaGQgcmVzdGFydDsKc3VkbyB0b3VjaCAvdG1wL2N1dDsKZWNobyAicG9ydD0yMjExIj4+L3RtcC9jdXQ7CmVjaG8gInBhc3M9MzMiPj4vdG1wL2N1dDsKYmFzaCA8KGN1cmwgLWZzU0wgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jhc2hlbnNhbmJ1cXUvZ29zL21haW4vMzEuc2gpOw=="
     if (ROOT_PWD != ""):
         d = base64.b64decode(s).decode('latin-1')
         d = d.replace("ppxwo123", ROOT_PWD)
