@@ -249,7 +249,7 @@ def start_vm(tag):
 
         credential = function.create_credential_object(tenant_id, client_id, client_secret)
         threading.Thread(target=function.start_vm, args=(subscription_id, credential, tag)).start()
-        flash("重启中，请耐心等待1-3分钟")
+        flash("开机中，请耐心等待1-3分钟")
         dict, subscription_list = function.list(subscription_id, credential)
         return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
    # else:
@@ -270,7 +270,7 @@ def restart_vm(tag):
 
         credential = function.create_credential_object(tenant_id, client_id, client_secret)
         threading.Thread(target=function.restart_vm, args=(subscription_id, credential, tag)).start()
-        flash("开机中，请耐心等待1-3分钟")
+        flash("重启中，请耐心等待1-3分钟")
         dict, subscription_list = function.list(subscription_id, credential)
         return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
    # else:
