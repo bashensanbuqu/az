@@ -256,6 +256,27 @@ def start_vm(tag):
         #logger.debug("you are not logged in")
    #     return redirect(url_for('login'))
 
+@app.route('/account/vm/restart/<string:tag>')
+def restart_vm(tag):
+   # if 'username' in session:
+        account = request.args.get('account')
+
+        result = User.query.filter(User.account == account).all()
+
+        client_id = result[0].client_id
+        client_secret = result[0].client_secret
+        tenant_id = result[0].tenant_id
+        subscription_id = result[0].subscription_id
+
+        credential = function.create_credential_object(tenant_id, client_id, client_secret)
+        threading.Thread(target=function.restart_vm, args=(subscription_id, credential, tag)).start()
+        flash("开机中，请耐心等待1-3分钟")
+        dict, subscription_list = function.list(subscription_id, credential)
+        return render_template('list.html', dict=dict, subscription_list=subscription_list, account=account)
+   # else:
+        #logger.debug("you are not logged in")
+   #     return redirect(url_for('login'))  
+  
 @app.route('/account/vm/stop/<string:tag>')
 def stop_vm(tag):
   #  if 'username' in session:
