@@ -224,6 +224,14 @@ def start_vm(subscription_id, credential, tag):
         GROUP_NAME, VM_NAME)
     async_vm_start.wait()
 
+def restart_vm(subscription_id, credential, tag):
+    compute_client = ComputeManagementClient(credential, subscription_id)
+    GROUP_NAME = tag
+    VM_NAME = tag
+    async_vm_restart = compute_client.virtual_machines.restart(
+        GROUP_NAME, VM_NAME)
+    async_vm_restart.wait()
+    
 
 def stop_vm(subscription_id, credential, tag):
     compute_client = ComputeManagementClient(credential, subscription_id)
