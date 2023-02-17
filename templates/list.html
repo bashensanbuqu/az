@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  {% for u in users %}
+  {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
+  {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
     <p>虚拟机列表</p>
-        {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
-    <p>备注邮箱  {{ account }}  {{ id_status }}</p>
-    <p>appId  {{ client_id }}</p>
-    <p>password  {{ client_secret }}</p>
-    <p>tenant  {{ tenant_id }}</p>
-    <p>sub订阅ID  {{ subscription_id }}</p>
+
+    <p>备注邮箱  {{ account }}</p>
+    <p>appId  {{ u.client_id }}</p>
+    <p>password  {{ u.client_secret }}</p>
+    <p>tenant  {{ u.tenant_id }}</p>
+    <p>sub订阅ID  {{ u.subscription_id }}</p>
 
 
     <ul  class="list">
@@ -17,20 +20,24 @@
             </li>
 
     </ul>
-        {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+
     <p> <a class="go" href="/account/vm/create?account={{ account }}" title="新建">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="刷新">刷新订阅状态</a> <a class="go" href="http://az.91vps.tw:6001/{{ account }}" title="多ip设置" >多ip设置</a> </p>
     <ul  class="list"> 
-        {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
+
         <li>{{ tag }} - {{ ip }}
         <span class="float-right">
             <a class="go" href="/account/vm/delete/{{ tag }}?account={{ account }}" title="删除{{ tag }}" >删机器</a>
             <a class="go" href="/account/vm/changeip/{{ tag }}?account={{ account }}" title="更换{{ ip }}" >换IP</a>
-            <a class="go" href="http://az.91vps.tw:6001/addips/{{ tag }}/{{ tag }}/{{ account }}" title="{{ tag }}添加ip" >加ip</a>
-            <a class="go" href="http://az.91vps.tw:6001/viewip/{{ tag }}/{{ tag }}/{{ account }}" title="{{ tag }}ip列表" >ip表</a>
-            <a class="go" href="http://az.91vps.tw:6001/delallip/{{ tag }}/{{ tag }}/{{ account }}" title="{{ tag }}副IP全删" >IP删</a>
-            <a class="go" href="/account/vm/restart/{{ tag }}?account={{ account }}" title="重启" >重启</a>
+           <a class="go" href="/account/vm/restart/{{ tag }}?account={{ account }}" title="重启" >重启</a>
+            <a class="go" href="http://az.91vps.tw:6001/addips/{{ tag }}/{{ tag }}/{{ u.subscription_id }}" title="{{ tag }}添加ip" >加ip</a>
+            <a class="go" href="http://az.91vps.tw:6001/viewip/{{ tag }}/{{ tag }}/{{ u.subscription_id }}" title="{{ tag }}ip列表" >ip表</a>
+            <a class="go" href="http://az.91vps.tw:6001/delallip/{{ tag }}/{{ tag }}/{{ u.subscription_id }}" title="{{ tag }}副IP全删" >IP删</a>
+ 
         </span>
         </li>
-        {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+       
     </ul>
+  {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+  {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+  {% endfor %}
 {% endblock %}
