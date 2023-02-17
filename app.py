@@ -146,7 +146,7 @@ def list():
         account = request.args.get('account')
         result = User.query.filter(User.account == account).all()
       
-        account = request.args.get('subscription_id')
+        subscription_id = request.args.get('subscription_id')
         result = User.query.filter(User.subscription_id == subscription_id).all()
         
         client_id = result[0].client_id
