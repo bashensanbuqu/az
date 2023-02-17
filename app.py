@@ -145,11 +145,14 @@ def list():
   #  if 'username' in session:
         account = request.args.get('account')
         result = User.query.filter(User.account == account).all()
-
+      
+        account = request.args.get('subscription_id')
+        result = User.query.filter(User.subscription_id == subscription_id).all()
+        
         client_id = result[0].client_id
         client_secret = result[0].client_secret
         tenant_id = result[0].tenant_id
-        subscription_id = result[0].subscription_id
+ #       subscription_id = result[0].subscription_id
 
         credential = function.create_credential_object(tenant_id, client_id, client_secret)
 
