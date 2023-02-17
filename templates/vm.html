@@ -8,35 +8,7 @@
           <p><label> <input type="hidden" name="vmusername" value="azureuser" autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="vmpasswd" value="Taohaiying520." autocomplete="off" required></label></p>
           <p><label> <input type="hidden" name="rootpwd" value="Taohaiying520." autocomplete="off" required></label></p>
-        <p><label>数量 <select name="set" required>
-            <option value="1">创建1台</option>
-            <option value="2">创建2台</option>
-            <option value="3">创建3台</option>
-            <option value="4">创建4台</option>
- 
-        </select></label></p>
-        <p><label>硬盘大小 <select name="storgesize" required>
-            <option value=30>30</option>
-            <option value=64>64</option>
-            <option value=128>128</option>
-            <option value=256>256</option>
-            <option value=512>512</option>
-            <option value=1024>1024</option>
-        </select></label></p>
-        <p><label>型号 <select name="size" required>
-            <option value="Standard_B1ls"  >B.B1ls---1c0.5g---3.7U</option>
-            <option value="Standard_B1s"   >A.B1s----1c1g-----7.5U优惠</option>
-            <option value="Standard_B1ms"  >C.B1ms---1c2g-----14.9U</option>
-            <option value="Standard_B2s"   >D.B2s----2c4g-----30U</option>
-            <option value="Standard_D2s_v3">E.D2s---2c8g----69.1U</option>
-            <option value="Standard_D4s_v3">F.D4s---4c16g---138.2U</option>
-            <option value="Standard_F2s"   >G.F2s---2c4g----71.2U</option>
-            <option value="Standard_F4s"   >H.F4s---4c8g----143.3U</option>
-            <option value="Standard_F8s"   >I.F8s-x-8c16g---286.6U</option>
-            <option value="Standard_F2s_v2">J.F2s_v2---2c4g----60.9U</option>
-            <option value="Standard_F4s_v2">K.F4s_v2---4c8g----121.7U</option>
-            <option value="Standard_F8s_v2">L.F8s_v2-x-8c16g---243.4U</option>
-        </select></label></p>
+	      
         <p><label>系统 <select name="os" required>
             <option value="centos79"   >a.CentOS 7.9</option>
             <option value="centos"     >b.CentOS 7.5</option>
@@ -53,11 +25,42 @@
             <option value="win-2012-r2">m.[smalldisk] Windows Server 2012 R2 Datacenter - Gen2</option>
             <option value="win10"      >n.win10 硬盘需改128</option>
         </select></label></p>
+	      
+        <p><label>数量 <select name="set" required>
+            <option value="1">创建1台</option>
+            <option value="2">创建2台</option>
+            <option value="3">创建3台</option>
+            <option value="4">创建4台</option>
+ 
+        </select></label></p>
+        <p><label>硬盘大小 <select name="storgesize" required>
+            <option value=64>64</option>
+            <option value=30>30</option>
+            <option value=128>128</option>
+            <option value=256>256</option>
+            <option value=512>512</option>
+            <option value=1024>1024</option>
+        </select></label></p>
+        <p><label>型号 <select name="size" required>
+            <option value="Standard_B1s"   >A.B1s----1c1g-----7.5U优惠</option>
+            <option value="Standard_B1ls"  >B.B1ls---1c0.5g---3.7U</option>
+            <option value="Standard_B1ms"  >C.B1ms---1c2g-----14.9U</option>
+            <option value="Standard_B2s"   >D.B2s----2c4g-----30U</option>
+            <option value="Standard_D2s_v3">E.D2s---2c8g----69.1U</option>
+            <option value="Standard_D4s_v3">F.D4s---4c16g---138.2U</option>
+            <option value="Standard_F2s"   >G.F2s---2c4g----71.2U</option>
+            <option value="Standard_F4s"   >H.F4s---4c8g----143.3U</option>
+            <option value="Standard_F8s"   >I.F8s-x-8c16g---286.6U</option>
+            <option value="Standard_F2s_v2">J.F2s_v2---2c4g----60.9U</option>
+            <option value="Standard_F4s_v2">K.F4s_v2---4c8g----121.7U</option>
+            <option value="Standard_F8s_v2">L.F8s_v2-x-8c16g---243.4U</option>
+        </select></label></p>
+
         <p><label>区域 <select name="location" required>
 	     //常用
+            <option          value="japaneast">03.日本东---东京-----亚洲</option>
             <option           value="eastasia">01.香港--------------亚洲</option>
             <option       value="koreacentral">02.韩国中---首尔-----亚洲</option>
-            <option          value="japaneast">03.日本东---东京-----亚洲</option>
             <option      value="southeastasia">04.新加坡x-----------亚洲</option>
             <option         value="koreasouth">05.韩国南---釜山xx---亚洲</option>
             <option          value="japanwest">06.日本西---大阪x----亚洲</option>
