@@ -3,7 +3,7 @@
 {% block content %}
   {% for u in users %}
   {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
-  {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
+
     <p>虚拟机列表</p>
 
     <p>备注邮箱  {{ account }}</p>
@@ -20,10 +20,11 @@
             </li>
 
     </ul>
-
+  {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
+  {% endfor %}
     <p> <a class="go" href="/account/vm/create?account={{ account }}" title="新建">新建虚拟机</a> <a class="go" href="/account/list?account={{ account }}" title="刷新">刷新订阅状态</a> <a class="go" href="http://az.91vps.tw:6001/{{ account }}" title="多ip设置" >多ip设置</a> </p>
     <ul  class="list"> 
-
+  {% for ip, tag in dict["ip"]|zip(dict["tag"]) %}
         <li>{{ tag }} - {{ ip }}
         <span class="float-right">
             <a class="go" href="/account/vm/delete/{{ tag }}?account={{ account }}" title="删除{{ tag }}" >删机器</a>
@@ -35,9 +36,8 @@
  
         </span>
         </li>
-       
+  {% endfor %}{# 使用 endfor 标签结束 for 语句 #}    
     </ul>
-  {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
-  {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
-  {% endfor %}
+
+
 {% endblock %}
