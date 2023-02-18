@@ -30,7 +30,7 @@ class User(db.Model):
   subscription_id = db.Column(db.String(100),primary_key=True)
 
   def __init__(self, account, client_id,client_secret,tenant_id,subscription_id):
-    self.account = account
+    self.account = subscription_id + " " + account
     self.client_id = client_id
     self.client_secret = client_secret
     self.tenant_id = tenant_id
