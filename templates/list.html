@@ -14,6 +14,7 @@
         {% for name, id_status in subscription_list["name"]|zip(subscription_list["id_status"]) %}
             <li>{{ name }}
                 {{ id_status }}
+                {{ subscription_id }}
             </li>
         {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
     </ul>
