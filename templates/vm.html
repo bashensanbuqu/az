@@ -2,7 +2,7 @@
 
 {% block content %}
     <p>新建虚拟机</p>
-    <p>{{ account }} <a class="go" href="/account/list?account={{ account }}"  title="返回">返回虚拟机列表</a></p>
+    <p> <a class="go" href="/account/list?account={{ account }}"  title="返回">返回虚拟机列表</a> {{ account }}</p>
     <form method="post">
       <div>
           <p><label> <input type="hidden" name="vmusername" value="azureuser" autocomplete="off" required></label></p>
