@@ -22,20 +22,21 @@ db = SQLAlchemy(app)
 
 
 class User(db.Model):
-
+  zhanghao = db.Column(db.String(100))
   account = db.Column(db.String(100))
   client_id = db.Column(db.String(100))
   client_secret = db.Column(db.String(100))
   tenant_id = db.Column(db.String(100))
   subscription_id = db.Column(db.String(100),primary_key=True)
 
-  def __init__(self, account, client_id,client_secret,tenant_id,subscription_id):
-    self.account = subscription_id + " " + account
+  def __init__(self, account, client_id,client_secret,tenant_id,subscription_id,zhanghao):
+    
+    self.account = account
     self.client_id = client_id
     self.client_secret = client_secret
     self.tenant_id = tenant_id
     self.subscription_id = subscription_id
-
+    self.zhanghao = zhanghao
 
 
 
@@ -94,17 +95,18 @@ def accountadd():
     if 'username' in session:
         if request.method == 'POST':  # 判断是否是 POST 请求
             # 获取表单数据
-            account = request.form.get('account')
+            zhanghao = request.form.get('account')
+            account = request.form.get('subscription_id')
             client_id = request.form.get('client_id')
             client_secret = request.form.get('client_secret')
             tenant_id = request.form.get('tenant_id')
             subscription_id = request.form.get('subscription_id')
             # 验证数据
-            if not account or not client_id or not client_secret or not tenant_id or not subscription_id:
+            if  not client_id or not client_secret or not tenant_id or not subscription_id:
                 flash('输入错误')  # 显示错误提示
          #       return redirect(url_for('index'))  # 重定向回主页
             # 保存表单数据到cookie
-            u = User(account, client_id,client_secret,tenant_id,subscription_id)
+            u = User(account, client_id,client_secret,tenant_id,subscription_id,zhanghao)
             db.session.add(u)
             db.session.commit()
 
