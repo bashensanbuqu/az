@@ -142,7 +142,7 @@ def accountdel():
         return redirect(url_for('login'))
 
 
-@app.route('/account/list')
+@app.route('/account/list', methods=['GET', 'POST'])
 def list():
   #  if 'username' in session:
         account = request.args.get('account')
