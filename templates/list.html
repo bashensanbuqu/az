@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% for u in users %}
     <p>虚拟机列表</p>
 
     <p>账 号  {{ zhanghao }}</p>
@@ -33,4 +34,5 @@
         </li>
         {% endfor %}{# 使用 endfor 标签结束 for 语句 #}
     </ul>
+{% endfor %}
 {% endblock %}
